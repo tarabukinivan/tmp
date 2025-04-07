@@ -1,0 +1,1606 @@
+>>> print_model_info("/root/tmp/my/mel2d.onnx")
+
+Model: /root/tmp/my/mel2d.onnx
+Inputs: ['input']
+Outputs: ['output']
+Opset versions: [11]
+
+Found 20 Conv nodes:
+  /conv1/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [3, 3, 3, 3]
+    strides: [2, 2]
+  /layer1/layer1.0/conv1/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /layer1/layer1.0/conv2/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /layer1/layer1.1/conv1/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /layer1/layer1.1/conv2/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /layer2/layer2.0/conv1/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [2, 2]
+  /layer2/layer2.0/conv2/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /layer2/layer2.0/downsample/downsample.0/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [2, 2]
+  /layer2/layer2.1/conv1/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /layer2/layer2.1/conv2/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /layer3/layer3.0/conv1/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [2, 2]
+  /layer3/layer3.0/conv2/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /layer3/layer3.0/downsample/downsample.0/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [2, 2]
+  /layer3/layer3.1/conv1/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /layer3/layer3.1/conv2/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /layer4/layer4.0/conv1/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [2, 2]
+  /layer4/layer4.0/conv2/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /layer4/layer4.0/downsample/downsample.0/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [2, 2]
+  /layer4/layer4.1/conv1/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /layer4/layer4.1/conv2/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+>>> print_model_info("/root/tmp/my/melanoma_dev.onnx")
+
+Model: /root/tmp/my/melanoma_dev.onnx
+Inputs: ['input']
+Outputs: ['output']
+Opset versions: [11]
+
+Found 245 Conv nodes:
+  /conv_stem/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [2, 2]
+  /blocks/blocks.0/blocks.0.0/conv/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.0/blocks.0.1/conv/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.0/blocks.0.2/conv/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.1/blocks.1.0/conv_exp/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [2, 2]
+  /blocks/blocks.1/blocks.1.0/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.1/blocks.1.1/conv_exp/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.1/blocks.1.1/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.1/blocks.1.2/conv_exp/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.1/blocks.1.2/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.1/blocks.1.3/conv_exp/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.1/blocks.1.3/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.1/blocks.1.4/conv_exp/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.1/blocks.1.4/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.2/blocks.2.0/conv_exp/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [2, 2]
+  /blocks/blocks.2/blocks.2.0/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.2/blocks.2.1/conv_exp/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.2/blocks.2.1/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.2/blocks.2.2/conv_exp/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.2/blocks.2.2/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.2/blocks.2.3/conv_exp/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.2/blocks.2.3/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.2/blocks.2.4/conv_exp/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.2/blocks.2.4/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.0/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.0/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 320
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [2, 2]
+  /blocks/blocks.3/blocks.3.0/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.0/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.0/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.1/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.1/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 640
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.1/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.1/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.1/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.2/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.2/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 640
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.2/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.2/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.2/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.3/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.3/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 640
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.3/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.3/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.3/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.4/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.4/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 640
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.4/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.4/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.4/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.5/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.5/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 640
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.5/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.5/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.5/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.6/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.6/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 640
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.6/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.6/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.3/blocks.3.6/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.0/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.0/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 960
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.0/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.0/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.0/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.1/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.1/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.1/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.1/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.1/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.2/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.2/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.2/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.2/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.2/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.3/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.3/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.3/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.3/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.3/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.4/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.4/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.4/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.4/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.4/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.5/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.5/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.5/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.5/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.5/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.6/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.6/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.6/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.6/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.6/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.7/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.7/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.7/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.7/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.7/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.8/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.8/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.8/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.8/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.8/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.9/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.9/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.9/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.9/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.9/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.10/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.10/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.10/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.10/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.10/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.11/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.11/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.11/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.11/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.11/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.12/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.12/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.12/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.12/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.12/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.13/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.13/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.13/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.13/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.4/blocks.4.13/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.0/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.0/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1056
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [2, 2]
+  /blocks/blocks.5/blocks.5.0/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.0/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.0/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.1/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.1/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.1/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.1/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.1/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.2/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.2/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.2/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.2/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.2/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.3/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.3/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.3/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.3/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.3/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.4/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.4/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.4/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.4/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.4/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.5/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.5/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.5/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.5/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.5/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.6/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.6/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.6/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.6/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.6/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.7/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.7/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.7/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.7/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.7/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.8/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.8/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.8/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.8/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.8/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.9/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.9/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.9/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.9/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.9/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.10/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.10/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.10/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.10/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.10/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.11/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.11/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.11/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.11/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.11/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.12/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.12/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.12/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.12/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.12/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.13/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.13/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.13/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.13/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.13/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.14/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.14/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.14/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.14/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.14/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.15/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.15/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.15/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.15/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.15/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.16/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.16/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.16/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.16/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.16/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.17/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.17/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.17/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.17/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.5/blocks.5.17/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.0/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.0/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 1824
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.0/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.0/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.0/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.1/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.1/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 3072
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.1/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.1/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.1/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.2/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.2/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 3072
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.2/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.2/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.2/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.3/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.3/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 3072
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.3/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.3/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.3/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.4/conv_pw/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.4/conv_dw/Conv:
+    dilations: [1, 1]
+    group: 3072
+    kernel_shape: 0
+    pads: [1, 1, 1, 1]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.4/se/conv_reduce/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.4/se/conv_expand/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /blocks/blocks.6/blocks.6.4/conv_pwl/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
+  /conv_head/Conv:
+    dilations: [1, 1]
+    group: 1
+    kernel_shape: 0
+    pads: [0, 0, 0, 0]
+    strides: [1, 1]
