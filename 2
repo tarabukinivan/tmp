@@ -1,0 +1,354 @@
+af get-sample 45 GAME 49151939
+{
+  "miner_hotkey": "5DVC1vZ4P4RYcbXoMjm42dGRBd3pvPBXCyQGY1cYaSjJi3WJ",
+  "model_revision": "34b330c085d85bd153cf94b8eed36b66132b1d1a",
+  "model": "Infinite3214/Affine-0305-5DVC1vZ4P4RYcbXoMjm42dGRBd3pvPBXCyQGY1cYaSjJi3WJ",
+  "env": "GAME",
+  "task_id": 49151939,
+  "score": 1.0,
+  "timestamp": 1773075895347,
+  "block_number": 7708984,
+  "latency_ms": 10167,
+  "extra": {
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You are playing goofspiel.\n\n# Game Rules\nGOOFSPIEL RULES:\nSetup: Each player has bid cards numbered 1 to N. A prize deck with cards 1 to N is shuffled.\nGoal: Win the most points by bidding on prize cards.\n\nEach turn:\n1. Reveal top prize card (worth its face value in points)\n2. Players simultaneously play one bid card from their hand\n3. Highest bidder wins the prize card (adds its value to score)\n4. If bids tie, prize card is discarded (no one gets points)\n\nWinning: Player with most points after all rounds wins.\n\n\n# Output Format\nYou must respond with ONLY the action ID (a single number).\nDo NOT include descriptions or explanations.\n\nExamples:\n- For action \"0 -> roll\": respond \"0\"\n- For action \"89 -> a3\": respond \"89\""
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 7\nRemaining Point Cards: 1234568910111213141516\nP0 hand: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 \nP1 hand: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 \nWin sequence: \n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie)\nPlayer 0: 0 points, Player 1: 0 points \n\n\nYou are Player 0.\nLegal Actions:\n0 -> [P0]Bid: 1\n1 -> [P0]Bid: 2\n2 -> [P0]Bid: 3\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n5 -> [P0]Bid: 6\n6 -> [P0]Bid: 7\n7 -> [P0]Bid: 8\n8 -> [P0]Bid: 9\n9 -> [P0]Bid: 10\n10 -> [P0]Bid: 11\n11 -> [P0]Bid: 12\n12 -> [P0]Bid: 13\n13 -> [P0]Bid: 14\n14 -> [P0]Bid: 15\n15 -> [P0]Bid: 16\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "13"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 15\nRemaining Point Cards: 12345689101112131416\nP0 hand: 1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 \nP1 hand: 1 2 3 4 5 6 7 8 9 10 11 13 14 15 16 \nWin sequence: 0\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 7 points, Player 1: 0 points \n\n\nYou are Player 0.\nLegal Actions:\n0 -> [P0]Bid: 1\n1 -> [P0]Bid: 2\n2 -> [P0]Bid: 3\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n5 -> [P0]Bid: 6\n6 -> [P0]Bid: 7\n7 -> [P0]Bid: 8\n8 -> [P0]Bid: 9\n9 -> [P0]Bid: 10\n10 -> [P0]Bid: 11\n11 -> [P0]Bid: 12\n12 -> [P0]Bid: 13\n14 -> [P0]Bid: 15\n15 -> [P0]Bid: 16\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "12"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 16\nRemaining Point Cards: 123456891011121314\nP0 hand: 1 2 3 4 5 6 7 8 9 10 11 12 15 16 \nP1 hand: 1 2 3 4 5 6 7 9 10 11 13 14 15 16 \nWin sequence: 0 0\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 22 points, Player 1: 0 points \n\n\nYou are Player 0.\nLegal Actions:\n0 -> [P0]Bid: 1\n1 -> [P0]Bid: 2\n2 -> [P0]Bid: 3\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n5 -> [P0]Bid: 6\n6 -> [P0]Bid: 7\n7 -> [P0]Bid: 8\n8 -> [P0]Bid: 9\n9 -> [P0]Bid: 10\n10 -> [P0]Bid: 11\n11 -> [P0]Bid: 12\n14 -> [P0]Bid: 15\n15 -> [P0]Bid: 16\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "15"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 12\nRemaining Point Cards: 1234568910111314\nP0 hand: 1 2 3 4 5 6 7 8 9 10 11 12 15 \nP1 hand: 1 2 3 4 5 6 7 9 10 11 13 15 16 \nWin sequence: 0 0 0\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 38 points, Player 1: 0 points \n\n\nYou are Player 0.\nLegal Actions:\n0 -> [P0]Bid: 1\n1 -> [P0]Bid: 2\n2 -> [P0]Bid: 3\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n5 -> [P0]Bid: 6\n6 -> [P0]Bid: 7\n7 -> [P0]Bid: 8\n8 -> [P0]Bid: 9\n9 -> [P0]Bid: 10\n10 -> [P0]Bid: 11\n11 -> [P0]Bid: 12\n14 -> [P0]Bid: 15\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "14"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 4\nRemaining Point Cards: 123568910111314\nP0 hand: 1 2 3 4 5 6 7 8 9 10 11 12 \nP1 hand: 1 3 4 5 6 7 9 10 11 13 15 16 \nWin sequence: 0 0 0 0\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 50 points, Player 1: 0 points \n\n\nYou are Player 0.\nLegal Actions:\n0 -> [P0]Bid: 1\n1 -> [P0]Bid: 2\n2 -> [P0]Bid: 3\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n5 -> [P0]Bid: 6\n6 -> [P0]Bid: 7\n7 -> [P0]Bid: 8\n8 -> [P0]Bid: 9\n9 -> [P0]Bid: 10\n10 -> [P0]Bid: 11\n11 -> [P0]Bid: 12\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "1"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 10\nRemaining Point Cards: 1235689111314\nP0 hand: 1 3 4 5 6 7 8 9 10 11 12 \nP1 hand: 1 3 4 5 6 7 10 11 13 15 16 \nWin sequence: 0 0 0 0 1\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 50 points, Player 1: 4 points \n\n\nYou are Player 0.\nLegal Actions:\n0 -> [P0]Bid: 1\n2 -> [P0]Bid: 3\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n5 -> [P0]Bid: 6\n6 -> [P0]Bid: 7\n7 -> [P0]Bid: 8\n8 -> [P0]Bid: 9\n9 -> [P0]Bid: 10\n10 -> [P0]Bid: 11\n11 -> [P0]Bid: 12\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "10"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 9\nRemaining Point Cards: 123568111314\nP0 hand: 1 3 4 5 6 7 8 9 10 12 \nP1 hand: 1 3 4 5 6 7 10 13 15 16 \nWin sequence: 0 0 0 0 1 -3\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 50 points, Player 1: 4 points \n\n\nYou are Player 0.\nLegal Actions:\n0 -> [P0]Bid: 1\n2 -> [P0]Bid: 3\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n5 -> [P0]Bid: 6\n6 -> [P0]Bid: 7\n7 -> [P0]Bid: 8\n8 -> [P0]Bid: 9\n9 -> [P0]Bid: 10\n11 -> [P0]Bid: 12\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "11"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 5\nRemaining Point Cards: 12368111314\nP0 hand: 1 3 4 5 6 7 8 9 10 \nP1 hand: 1 3 4 5 6 7 10 15 16 \nWin sequence: 0 0 0 0 1 -3 1\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 50 points, Player 1: 13 points \n\n\nYou are Player 0.\nLegal Actions:\n0 -> [P0]Bid: 1\n2 -> [P0]Bid: 3\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n5 -> [P0]Bid: 6\n6 -> [P0]Bid: 7\n7 -> [P0]Bid: 8\n8 -> [P0]Bid: 9\n9 -> [P0]Bid: 10\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "9"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 8\nRemaining Point Cards: 1236111314\nP0 hand: 1 3 4 5 6 7 8 9 \nP1 hand: 1 3 4 5 6 7 10 15 \nWin sequence: 0 0 0 0 1 -3 1 1\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 50 points, Player 1: 18 points \n\n\nYou are Player 0.\nLegal Actions:\n0 -> [P0]Bid: 1\n2 -> [P0]Bid: 3\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n5 -> [P0]Bid: 6\n6 -> [P0]Bid: 7\n7 -> [P0]Bid: 8\n8 -> [P0]Bid: 9\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "5"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 1\nRemaining Point Cards: 236111314\nP0 hand: 1 3 4 5 7 8 9 \nP1 hand: 3 4 5 6 7 10 15 \nWin sequence: 0 0 0 0 1 -3 1 1 0\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 58 points, Player 1: 18 points \n\n\nYou are Player 0.\nLegal Actions:\n0 -> [P0]Bid: 1\n2 -> [P0]Bid: 3\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n6 -> [P0]Bid: 7\n7 -> [P0]Bid: 8\n8 -> [P0]Bid: 9\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "0"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 2\nRemaining Point Cards: 36111314\nP0 hand: 3 4 5 7 8 9 \nP1 hand: 3 4 5 6 7 15 \nWin sequence: 0 0 0 0 1 -3 1 1 0 1\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 58 points, Player 1: 19 points \n\n\nYou are Player 0.\nLegal Actions:\n2 -> [P0]Bid: 3\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n6 -> [P0]Bid: 7\n7 -> [P0]Bid: 8\n8 -> [P0]Bid: 9\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "2"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 14\nRemaining Point Cards: 361113\nP0 hand: 4 5 7 8 9 \nP1 hand: 3 5 6 7 15 \nWin sequence: 0 0 0 0 1 -3 1 1 0 1 1\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 58 points, Player 1: 21 points \n\n\nYou are Player 0.\nLegal Actions:\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n6 -> [P0]Bid: 7\n7 -> [P0]Bid: 8\n8 -> [P0]Bid: 9\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "8"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 13\nRemaining Point Cards: 3611\nP0 hand: 4 5 7 8 \nP1 hand: 3 5 6 7 \nWin sequence: 0 0 0 0 1 -3 1 1 0 1 1 1\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 58 points, Player 1: 35 points \n\n\nYou are Player 0.\nLegal Actions:\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n6 -> [P0]Bid: 7\n7 -> [P0]Bid: 8\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "7"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 11\nRemaining Point Cards: 36\nP0 hand: 4 5 7 \nP1 hand: 3 5 7 \nWin sequence: 0 0 0 0 1 -3 1 1 0 1 1 1 0\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 71 points, Player 1: 35 points \n\n\nYou are Player 0.\nLegal Actions:\n3 -> [P0]Bid: 4\n4 -> [P0]Bid: 5\n6 -> [P0]Bid: 7\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "3"
+      },
+      {
+        "role": "user",
+        "content": "Current State:\nCurrent point card: 6\nRemaining Point Cards: 3\nP0 hand: 5 7 \nP1 hand: 3 5 \nWin sequence: 0 0 0 0 1 -3 1 1 0 1 1 1 0 1\n(Win sequence: 1=player 1 won, 0=player 0 won, negative=tie) \nPlayer 0: 71 points, Player 1: 46 points \n\n\nYou are Player 0.\nLegal Actions:\n4 -> [P0]Bid: 5\n6 -> [P0]Bid: 7\n\nYour choice (ID only):"
+      },
+      {
+        "role": "assistant",
+        "content": "4"
+      }
+    ],
+    "request": {
+      "task_id": 49151939,
+      "seed": 2850936286,
+      "temperature": 0.0,
+      "timeout": 7200,
+      "model": "Infinite3214/Affine-0305-5DVC1vZ4P4RYcbXoMjm42dGRBd3pvPBXCyQGY1cYaSjJi3WJ",
+      "base_url": "https://poker2-infinite3214-affine-0305-5dvc1vz4p4rycbxomjm42dgrbd.chutes.ai/v1"
+    },
+    "image": "affinefoundation/game:openspiel",
+    "action_history": [
+      {
+        "player_id": -1,
+        "action": 6,
+        "action_str": "Deal 7",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 13,
+        "action_str": "[P0]Bid: 14",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 14,
+        "action_str": "Deal 15",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 12,
+        "action_str": "[P0]Bid: 13",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 15,
+        "action_str": "Deal 16",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 15,
+        "action_str": "[P0]Bid: 16",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 11,
+        "action_str": "Deal 12",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 14,
+        "action_str": "[P0]Bid: 15",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 3,
+        "action_str": "Deal 4",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 1,
+        "action_str": "[P0]Bid: 2",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 9,
+        "action_str": "Deal 10",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 10,
+        "action_str": "[P0]Bid: 11",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 8,
+        "action_str": "Deal 9",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 11,
+        "action_str": "[P0]Bid: 12",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 4,
+        "action_str": "Deal 5",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 9,
+        "action_str": "[P0]Bid: 10",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 7,
+        "action_str": "Deal 8",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 5,
+        "action_str": "[P0]Bid: 6",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 0,
+        "action_str": "Deal 1",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 0,
+        "action_str": "[P0]Bid: 1",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 1,
+        "action_str": "Deal 2",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 2,
+        "action_str": "[P0]Bid: 3",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 13,
+        "action_str": "Deal 14",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 8,
+        "action_str": "[P0]Bid: 9",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 12,
+        "action_str": "Deal 13",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 7,
+        "action_str": "[P0]Bid: 8",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 10,
+        "action_str": "Deal 11",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 3,
+        "action_str": "[P0]Bid: 4",
+        "is_llm": true
+      },
+      {
+        "player_id": -1,
+        "action": 5,
+        "action_str": "Deal 6",
+        "is_llm": false
+      },
+      {
+        "player_id": 0,
+        "action": 4,
+        "action_str": "[P0]Bid: 5",
+        "is_llm": true
+      }
+    ],
+    "observation": "Current point card: 6\nRemaining Point Cards: 3\nP0 hand: 5 7 \nP1 hand: 3 5 \nWin sequence: 0 0 0 0 1 -3 1 1 0 1 1 1 0 1 \nPoints: 71 46 \n",
+    "task_type": "goofspiel",
+    "game_name": "goofspiel",
+    "task_id": 49151939,
+    "seed": 2850936286,
+    "opponent_type": "mcts",
+    "llm_player_id": 0,
+    "final_return": 1.0,
+    "all_returns": [
+      1.0,
+      -1.0
+    ],
+    "usage": {
+      "completion_tokens": 2,
+      "prompt_tokens": 4205,
+      "total_tokens": 4207,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 4049
+      },
+      "reasoning_tokens": 0
+    }
+  }
+}
