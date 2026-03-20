@@ -1,0 +1,159 @@
+(affine-cortex) root@vm3957eb88bf942:~/affine-cortex# af eval \
+  --env PRINT \
+  --base-url http://172.17.0.1:30000/v1 \
+  --model ajtaltarabukin2022/45_75_dtes \
+  --samples 10
+============================================================
+Using base URL: http://172.17.0.1:30000/v1
+
+Evaluation Configuration:
+  Environment: PRINT
+  Model: ajtaltarabukin2022/45_75_dtes
+  Base URL: http://172.17.0.1:30000/v1
+  Execution Mode: Docker (persistent containers)
+  Samples: 10
+  Temperature: 0.0
+============================================================
+
+Loading PRINT environment...
+[2026-03-20 14:14:26] [INFO] [affinetes] Pulling image 'affinefoundation/cde:print' from registry
+[2026-03-20 14:15:53] [INFO] [affinetes] Successfully pulled image 'affinefoundation/cde:print'
+[2026-03-20 14:15:53] [INFO] [affinetes] Environment type (detected): function_based
+[2026-03-20 14:15:53] [INFO] [affinetes] Host mode detected, using default network
+[2026-03-20 14:15:56] [INFO] [affinetes] HOST mode, accessing via IP: 172.17.0.2:8000
+✓ Environment loaded
+
+Starting evaluation (10 sample(s))...
+Progress: 4/10
+✗ Evaluation failed: Method 'evaluate' on environment 'print-eval' timed out after 600s
+Traceback (most recent call last):
+  File "/root/.local/share/uv/python/cpython-3.14.3-linux-x86_64-gnu/lib/python3.14/asyncio/tasks.py", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/affinetes/backends/local.py", line 604, in call_method
+    return await self._http_executor.call_method(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/affinetes/infrastructure/http_executor.py", line 78, in call_method
+    response = await self.client.post(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+    )
+    ^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.READ_NUM_BYTES, timeout=timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 35, in read
+    return await self._stream.receive(max_bytes=max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/anyio/_backends/_asyncio.py", line 1269, in receive
+    await self._protocol.read_event.wait()
+  File "/root/.local/share/uv/python/cpython-3.14.3-linux-x86_64-gnu/lib/python3.14/asyncio/locks.py", line 213, in wait
+    await fut
+  File "/root/.local/share/uv/python/cpython-3.14.3-linux-x86_64-gnu/lib/python3.14/asyncio/futures.py", line 295, in __await__
+    yield self  # This tells Task to wait for completion.
+    ^^^^^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.14.3-linux-x86_64-gnu/lib/python3.14/asyncio/futures.py", line 203, in result
+    raise self._make_cancelled_error()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/affinetes/core/wrapper.py", line 239, in method_caller
+    result = await asyncio.wait_for(call_coro, timeout=_timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.14.3-linux-x86_64-gnu/lib/python3.14/asyncio/tasks.py", line 487, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.14.3-linux-x86_64-gnu/lib/python3.14/asyncio/timeouts.py", line 114, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/affine-cortex/affine/src/miner/eval.py", line 428, in _run_evaluation
+    results = await _evaluate_samples(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/root/affine-cortex/affine/src/miner/eval.py", line 709, in _evaluate_samples
+    result_dict = await _evaluate_with_retry(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/root/affine-cortex/affine/src/miner/eval.py", line 640, in _evaluate_with_retry
+    result = await env_instance.evaluate(**eval_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/affine-cortex/affine/src/miner/eval.py", line 612, in evaluate
+    result = await self.env.evaluate(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/root/affine-cortex/.venv/lib/python3.14/site-packages/affinetes/core/wrapper.py", line 247, in method_caller
+    raise EnvironmentError(
+        f"Method '{name}' on environment '{self.name}' timed out after {_timeout}s"
+    )
+affinetes.utils.exceptions.EnvironmentError: Method 'evaluate' on environment 'print-eval' timed out after 600s
+[2026-03-20 14:40:30] [WARNING] [affinetes] Error closing HTTP client: cannot create weak reference to 'NoneType' object
+(affine-cortex) root@vm3957eb88bf942:~/affine-cortex#
