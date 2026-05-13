@@ -30,20 +30,70 @@ echo "  apt: ok"
 
 # Python deps
 pip install --quiet --upgrade pip
-pip install --quiet \
-    "torch>=2.3" "transformers>=4.45" "datasets" \
-    "accelerate" "huggingface_hub" "bitsandbytes>=0.43" \
-    "flash-attn>=2.5" "peft" "tiktoken" "protobuf" "sentencepiece" \
-    "safetensors" "tqdm" "aiohttp" "requests" "deepspeed>=0.14"
-echo "  pip: ok"
+# GPU info
+echo "--- GPUs ---"
+nvidia-smi -L
+NUM_GPU=$(nvidia-smi -L | wc -l)
+VRAM_GB=$(nvidia-smi --query-gpu=memory.total --format=csv,noheader,nounits | head -1)
+VRAM_GB=$((VRAM_GB / 1024))
+echo "GPUs: $NUM_GPU, VRAM/GPU: ${VRAM_GB} GB"
 
-# Verify flash-attn (build can fail)
-python3 -c "import flash_attn; print(f'flash-attn: {flash_attn.__version__}')" 2>&1 || {
-    echo "  WARNING: flash-attn import failed — installing fallback (no FA2)"
-}
+# System packages
+echo ""
+echo "--- apt deps ---"
+apt-get update -y >/dev/null 2>&1
+apt-get install -y --no-install-recommends \
+    tmux htop nvtop curl rsync git ninja-build >/dev/null 2>&1
+echo "  apt: ok"
 
-# Verify deepspeed
-python3 -c "import deepspeed; print(f'deepspeed: {deepspeed.__version__}')"
+# Python deps — stage 1: torch + core (must be done before flash-attn)
+echo ""
+echo "--- pip stage 1: torch + core ---"
+pip install --quiet --upgrade pip
+pip install --quiet --upgrade \
+    "torch>=2.3" \
+    "transformers>=4.45" \
+    "datasets>=2.18" \
+    "accelerate>=0.30" \
+    "huggingface_hub" \
+    "bitsandbytes>=0.43" \
+    "safetensors" \
+    "tqdm" \
+    "aiohttp" \
+    "requests" \
+    "tiktoken" \
+    "protobuf" \
+    "sentencepiece" \
+    "peft" \
+    "packaging" \
+    "ninja" \
+    "wheel"
+echo "  core: ok"
+
+# Stage 2: flash-attn (optional, may fail on Blackwell B300)
+echo ""
+echo "--- pip stage 2: flash-attn (optional) ---"
+# Build needs torch already installed → --no-build-isolation
+if pip install --quiet --no-build-isolation "flash-attn>=2.5" 2>/dev/null; then
+    python3 -c "import flash_attn; print(f'  flash-attn: {flash_attn.__version__}')"
+else
+    echo "  flash-attn install FAILED (common on B300 / new CUDA). Continuing without it."
+    echo "  Our trainer auto-falls back to default attention. Slower but works."
+fi
+
+# Verify torch + GPU
+echo ""
+echo "--- Verify ---"
+python3 -c "
+import torch
+print(f'torch:  {torch.__version__}')
+print(f'cuda:   {torch.cuda.is_available()}')
+print(f'device: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else \"NONE\"}')
+print(f'gpus:   {torch.cuda.device_count()}')
+"
+python3 -c "import bitsandbytes; print(f'bitsandbytes: {bitsandbytes.__version__}')"
+python3 -c "import transformers; print(f'transformers: {transformers.__version__}')"
+
 
 # Download Moonlight base
 BASE_DIR=${BASE_DIR:-/root/Moonlight-16B-A3B-Instruct}
