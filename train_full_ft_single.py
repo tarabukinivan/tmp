@@ -176,15 +176,32 @@ def main():
     )
 
     log("Loading model (BF16)...")
+    # Try flash-attn if available, else fall back gracefully
     try:
-        model = AutoModelForCausalLM.from_pretrained(
-            args.base_model, torch_dtype=torch.bfloat16,
-            trust_remote_code=True, attn_implementation="flash_attention_2",
-        )
+        import flash_attn  # noqa: F401
+        attn_impl = "flash_attention_2"
+        log("  flash_attention_2 available, using it")
+    except ImportError:
+        attn_impl = None
+        log("  flash_attn not installed, using default attention (sdpa)")
+
+    # transformers 5.x uses `dtype`; 4.x used `torch_dtype` — try both.
+    import inspect
+    _sig = inspect.signature(AutoModelForCausalLM.from_pretrained)
+    dtype_kw = "dtype" if "dtype" in _sig.parameters else "torch_dtype"
+    # IMPORTANT: do NOT use trust_remote_code for the MODEL — Moonlight's
+    # custom modeling_deepseek.py uses legacy DynamicCache APIs that no longer
+    # exist in transformers 4.50+. Use native DeepseekV3 implementation.
+    # (Tokenizer still needs trust_remote_code for tiktoken.)
+    try:
+        kwargs = {dtype_kw: torch.bfloat16}
+        if attn_impl:
+            kwargs["attn_implementation"] = attn_impl
+        model = AutoModelForCausalLM.from_pretrained(args.base_model, **kwargs)
     except Exception as e:
-        log(f"  flash_attention_2 unavailable ({e}), falling back to default")
+        log(f"  loading with attn_impl={attn_impl} failed ({e}); retrying default")
         model = AutoModelForCausalLM.from_pretrained(
-            args.base_model, torch_dtype=torch.bfloat16, trust_remote_code=True,
+            args.base_model, **{dtype_kw: torch.bfloat16},
         )
     model.gradient_checkpointing_enable()
     model.config.use_cache = False
