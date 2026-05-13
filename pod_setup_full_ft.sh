@@ -100,7 +100,7 @@ BASE_DIR=${BASE_DIR:-/root/Moonlight-16B-A3B-Instruct}
 if [[ ! -d "$BASE_DIR" ]] || [[ -z "$(ls -A $BASE_DIR/*.safetensors 2>/dev/null)" ]]; then
     echo ""
     echo "Downloading Moonlight base to $BASE_DIR..."
-    huggingface-cli download moonshotai/Moonlight-16B-A3B-Instruct \
+    hf download moonshotai/Moonlight-16B-A3B-Instruct \
         --local-dir "$BASE_DIR"
     echo "  Moonlight: downloaded"
 else
